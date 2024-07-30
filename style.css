@@ -1,72 +1,116 @@
+
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('bootcamppic.png'); /* Correct way to add background image */
-   /* background-size: cover;  Optional: Ensures the background image covers the whole body */
+    /* background-image: url('bootcamppic.png'); */
+    /* background-size: cover; */
+    display: flex;
+    justify-content: center; /* Center the container horizontally */
+    align-items: center; /* Center the container vertically */
+    min-height: 100vh; /* Ensure the body takes the full height of the viewport */
 }
-
 .container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /*align-items: center;*/
+    align-items: flex-start; /* Align items to the left */
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.8); /* Optional: to make the content more readable over the background */
+    background-color: #0000; /* make the content more readable over the background */
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: adds a shadow effect to the container */
+    box-shadow: 0 0 10px #6d6b6b); /*  shadow effect to the container */
 }
 
-header {
+
+.header {
     width: 100%;
     padding: 1em;
-    background-color: #20a8b4;
+    background-color: #F2F2F2;
     margin-bottom: 10px;
-    display: flex;  /* Enable flexbox */
+    display: flex;  
     justify-content: space-between;  /* Spread h1 and nav to opposite ends */
     align-items: center;  /* Center items vertically */
     border-bottom: 1px solid silver;
+    flex-direction: column; /* Stack header items vertically on mobile */
 }
 
 .heading {
     font-size: 2em;
-    color: #fff;
+    color:#20a8b4;
     margin: 0;
 }
 
 .code {
-    color: #ff5c0f; /* "Code" text color */
+    color: #ff5c0f ; /* "Code" text color */
 }
+
 
 .nav-list {
     list-style-type: none; /* Get rid of the bullets */
-    padding: 0; /* Remove padding on the <ul> */
-}
+    padding: 0; /* no padding on the <ul> */
+    display: flex;
+    flex-direction: column; /* Stack nav items vertically on mobile */
+    align-items: flex-start; /* Align items to the left */
+    
+} 
 
 .nav-list li {
     display: inline; /* Arrange the <li>s next to each other horizontally */
-    margin-right: 0.5em; /* Add right margin of 0.5em to the <li>s */
+    margin-bottom: 0.5em; /* Added right margin  */
+}
+/* for my links*/
+.nav-list a {
+    color: #000000; 
+    text-decoration: none; /* no underline */
+    
 }
 
+/* Hover effect for navigation links */
+.nav-list a:hover {
+    color: #ff5c0f; /* Orange color on hover */
+}
+
+/* remove lines from my links in the link list*/
+a {
+    text-decoration: none;
+    color: #000000 ;
+
+  }
+  
+/* selector for pic*/
 #bootcamppic {
-    height: 10px; /* Added px unit */
+    width: 600px;  /* width is better than height for image backgrounds*/
     background-color: white;
     border: 2px solid silver; /* Corrected property to be 'border' instead of 'border-color' */
-    padding: 2px;
+    padding: 20px;
     float: right;
-    margin: 10px;
+    margin: 10;
+    display: none; /* Hide image on mobile */
 }
 
 .paragraph {
-    text-align: right;
+    text-align: left;
     margin: 0 0 20px 0;
+    color: #000000 ;
+}
+.h2 {
+    text-align: left;
+    margin: 0 0 20px 0;
+    color: #000000 ;
+}
+
+/* color for leanring to code sentence*/
+.learningToCodeColor {
+    color: #ff5c0f ; /* "Code" text color */
 }
 
 .btn {
     padding: 12px;
     border-radius: 10px;
-    background-color: #20a8b4; /* Button background color */
+    background-color: #20a8b4 ; /* Button background color */
     color: #fff; /* Button text color */
     border: none;
     cursor: pointer;
@@ -74,5 +118,37 @@ header {
 }
 
 .btn:hover {
-    background-color: #17a2b8; /* Button hover background color */
+    background-color: #ff5c0f ; /* Button hover background color */
+}
+
+
+@media (min-width: 768px) {
+    .header {
+        flex-direction: row; /* Align header items horizontally on desktop */
+        justify-content: space-between; /* Ensure header content is spaced out on desktop */
+    }
+
+    .nav-list {
+        flex-direction: row; /* Align nav items horizontally on desktop */
+        align-items: center; /* Center items vertically in the nav */
+    }
+
+    .nav-list li {
+        margin-right: 15px; /* Space between nav items horizontally on desktop */
+        margin-bottom: 0; /* Remove bottom margin for horizontal alignment */
+    }
+
+    #bootcamppic {
+        display: block; /* Show image on desktop */
+        width: 600px; /* Set specific width */
+        float: right; /* Align image to the right */
+    }
+
+    .btn {
+        width: auto; /* Auto width on desktop */
+    }
+
+    .container {
+        text-align: left; /* Align text to the left on desktop */
+    }
 }
