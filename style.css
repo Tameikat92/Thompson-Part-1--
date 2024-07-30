@@ -1,0 +1,78 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('bootcamppic.png'); /* Correct way to add background image */
+   /* background-size: cover;  Optional: Ensures the background image covers the whole body */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: to make the content more readable over the background */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: adds a shadow effect to the container */
+}
+
+header {
+    width: 100%;
+    padding: 1em;
+    background-color: #20a8b4;
+    margin-bottom: 10px;
+    display: flex;  /* Enable flexbox */
+    justify-content: space-between;  /* Spread h1 and nav to opposite ends */
+    align-items: center;  /* Center items vertically */
+    border-bottom: 1px solid silver;
+}
+
+.heading {
+    font-size: 2em;
+    color: #fff;
+    margin: 0;
+}
+
+.code {
+    color: #ff5c0f; /* "Code" text color */
+}
+
+.nav-list {
+    list-style-type: none; /* Get rid of the bullets */
+    padding: 0; /* Remove padding on the <ul> */
+}
+
+.nav-list li {
+    display: inline; /* Arrange the <li>s next to each other horizontally */
+    margin-right: 0.5em; /* Add right margin of 0.5em to the <li>s */
+}
+
+#bootcamppic {
+    height: 10px; /* Added px unit */
+    background-color: white;
+    border: 2px solid silver; /* Corrected property to be 'border' instead of 'border-color' */
+    padding: 2px;
+    float: right;
+    margin: 10px;
+}
+
+.paragraph {
+    text-align: right;
+    margin: 0 0 20px 0;
+}
+
+.btn {
+    padding: 12px;
+    border-radius: 10px;
+    background-color: #20a8b4; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn:hover {
+    background-color: #17a2b8; /* Button hover background color */
+}
